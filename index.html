@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Cheat Sheet</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            border-left: 5px solid #667eea;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #555;
+            font-size: 1.1em;
+            margin: 20px 0 10px 0;
+        }
+
+        .definition {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .term {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .principles {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .principle {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+        }
+
+        .number {
+            background: #10b981;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .color {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8em;
+            text-align: center;
+        }
+
+        .color-primary { background: #667eea; }
+        .color-secondary { background: #10b981; }
+        .color-accent { background: #f59e0b; }
+        .color-danger { background: #ef4444; }
+
+        .tip {
+            background: #d1fae5;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .warning {
+            background: #fee2e2;
+            border-left: 4px solid #ef4444;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .code {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .theory-block {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #e2e8f0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Веб-Дизайн</h1>
+            <p class="subtitle">Все что нужно знать дизайнеру</p>
+        </div>
+
+        <div class="theory-block">
+            <h2>Основные понятия веб-дизайна</h2>
+            
+            <div class="definition">
+                <div class="term">Веб-дизайн</div>
+                <p>Это графический дизайн, перенесённый в интерактивную среду. Главная цель — помочь пользователю быстро и интуитивно ориентироваться на сайте, делая интерфейс красивым, полезным, простым и приятным в использовании.</p>
+            </div>
+
+            <div class="definition">
+                <div class="term">UI (User Interface)</div>
+                <p>Пользовательский интерфейс — все элементы и компоненты программы, которые способны оказывать влияние на взаимодействие пользователя с программным обеспечением.</p>
+            </div>
+
+            <div class="definition">
+                <div class="term">UX (User Experience)</div>
+                <p>Пользовательский опыт — общее восприятие и чувства пользователя, возникающие при использовании продукта, включая простоту использования, доступность и удовольствие от взаимодействия.</p>
+            </div>
+        </div>
+
+        <div class="grid">
+            <!-- Основные принципы -->
+            <div class="card">
+                <h2>Основные принципы</h2>
+                <div class="principles">
+                    <div class="principle">
+                        <div class="number">1</div>
+                        <div>
+                            <strong>Простота</strong>
+                            <p>Минимализм и понятный интерфейс</p>
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="number">2</div>
+                        <div>
+                            <strong>Консистентность</strong>
+                            <p>Единый стиль всех элементов</p>
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="number">3</div>
+                        <div>
+                            <strong>Иерархия</strong>
+                            <p>Четкая структура информации</p>
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="number">4</div>
+                        <div>
+                            <strong>Доступность</strong>
+                            <p>Учет потребностей всех пользователей</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="definition">
+                    <div class="term">Золотое сечение</div>
+                    <p>Пропорция 1:1.618, считающаяся идеальной для создания гармоничных композиций. Широко используется в искусстве, архитектуре и дизайне.</p>
+                </div>
+            </div>
+
+            <!-- Цвета -->
+            <div class="card">
+                <h2>Цветовая теория</h2>
+                
+                <div class="definition">
+                    <div class="term">Цветовой круг</div>
+                    <p>Инструмент для подбора гармоничных цветовых сочетаний. Основные схемы: комплементарные, аналогичные, триадные цвета.</p>
+                </div>
+
+                <div class="color-palette">
+                    <div class="color color-primary">Primary<br>#667eea</div>
+                    <div class="color color-secondary">Secondary<br>#10b981</div>
+                    <div class="color color-accent">Accent<br>#f59e0b</div>
+                    <div class="color color-danger">Danger<br>#ef4444</div>
+                </div>
+
+                <div class="definition">
+                    <div class="term">Психология цвета</div>
+                    <p>Каждый цвет вызывает определенные ассоциации: красный — энергия, синий — доверие, зеленый — природа, желтый — внимание.</p>
+                </div>
+
+                <div class="tip">
+                    <strong>Совет:</strong> Используйте правило 60-30-10 для распределения цветов: 60% основного, 30% вторичного, 10% акцентного
+                </div>
+            </div>
+
+            <!-- Типографика -->
+            <div class="card">
+                <h2>Типографика</h2>
+                
+                <div class="definition">
+                    <div class="term">Кегль</div>
+                    <p>Размер шрифта. Измеряется в пунктах (pt) или пикселях (px). Оптимальный размер для основного текста — 16px.</p>
+                </div>
+
+                <div class="definition">
+                    <div class="term">Интерлиньяж</div>
+                    <p>Межстрочный интервал. Оптимальное значение — 1.4-1.6 от размера шрифта для комфортного чтения.</p>
+                </div>
+
+                <h3>Иерархия шрифтов</h3>
+                <ul>
+                    <li>Заголовки: 2-2.5rem</li>
+                    <li>Подзаголовки: 1.5-1.75rem</li>
+                    <li>Основной текст: 1rem</li>
+                    <li>Мелкий текст: 0.875rem</li>
+                </ul>
+
+                <div class="warning">
+                    <strong>Важно:</strong> Не используйте больше 2-3 шрифтов в проекте. Сочетайте шрифты с засечками и без.
+                </div>
+            </div>
+
+            <!-- Композиция -->
+            <div class="card">
+                <h2>Композиция</h2>
+                
+                <div class="definition">
+                    <div class="term">Правило третей</div>
+                    <p>Разделение пространства на 9 равных частей. Размещение ключевых элементов на пересечениях линий создает баланс.</p>
+                </div>
+
+                <div class="definition">
+                    <div class="term">Визуальный вес</div>
+                    <p>Способность элемента привлекать внимание. Зависит от размера, цвета, контраста и расположения.</p>
+                </div>
+
+                <h3>Основные правила</h3>
+                <ul>
+                    <li>Используйте CSS Grid и Flexbox</li>
+                    <li>Соблюдайте единые отступы</li>
+                    <li>Применяйте правило близости</li>
+                    <li>Используйте whitespace</li>
+                </ul>
+
+                <div class="code">
+.container {<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;grid-template-columns: 1fr 1fr;<br>
+&nbsp;&nbsp;gap: 20px;<br>
+&nbsp;&nbsp;align-items: start;<br>
+}
+                </div>
+            </div>
+
+            <!-- Производительность -->
+            <div class="card">
+                <h2>Производительность</h2>
+                
+                <div class="definition">
+                    <div class="term">Core Web Vitals</div>
+                    <p>Ключевые метрики производительности от Google: LCP (скорость загрузки), FID (отзывчивость), CLS (стабильность макета).</p>
+                </div>
+
+                <div class="definition">
+                    <div class="term">Lazy Loading</div>
+                    <p>Техника отложенной загрузки контента, когда элементы загружаются только при приближении к ним пользователя.</p>
+                </div>
+
+                <h3>Ключевые метрики</h3>
+                <ul>
+                    <li>Размер страницы < 1MB</li>
+                    <li>Время загрузки < 3 секунд</li>
+                    <li>Минимум запросов к серверу</li>
+                    <li>LCP < 2.5 секунды</li>
+                </ul>
+
+                <div class="tip">
+                    <strong>Совет:</strong> Сжимайте изображения (WebP, AVIF) и используйте современные форматы. Минифицируйте CSS/JS файлы.
+                </div>
+            </div>
+
+            <!-- Доступность -->
+            <div class="card">
+                <h2>Доступность (a11y)</h2>
+                
+                <div class="definition">
+                    <div class="term">WCAG</div>
+                    <p>Web Content Accessibility Guidelines — международный стандарт доступности веб-контента. Уровни: A, AA, AAA.</p>
+                </div>
+
+                <div class="definition">
+                    <div class="term">ARIA</div>
+                    <p>Accessible Rich Internet Applications — набор атрибутов для улучшения доступности динамического контента.</p>
+                </div>
+
+                <h3>Основные правила</h3>
+                <ul>
+                    <li>Семантическая HTML разметка</li>
+                    <li>Достаточный цветовой контраст</li>
+                    <li>Клавиатурная навигация</li>
+                    <li>Alt текст для изображений</li>
+                    <li>Соответствие WCAG AA</li>
+                </ul>
+
+                <div class="code">
+&lt;nav aria-label="Основная навигация"&gt;<br>
+&nbsp;&nbsp;&lt;ul&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="/"&gt;Главная&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="/about"&gt;О нас&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;/ul&gt;<br>
+&lt;/nav&gt;
+                </div>
+            </div>
+
+            <!-- Юзабилити -->
+            <div class="card">
+                <h2>Юзабилити</h2>
+                
+                <div class="definition">
+                    <div class="term">Закон Фиттса</div>
+                    <p>Время достижения цели зависит от расстояния до цели и её размера. Чем ближе и крупнее элемент, тем быстрее на него можно кликнуть.</p>
+                </div>
+
+                <div class="definition">
+                    <div class="term">Правило 3 кликов</div>
+                    <p>Пользователь должен находить любую информацию на сайте не более чем за 3 клика.</p>
+                </div>
+
+                <h3>Принципы навигации</h3>
+                <ul>
+                    <li>Понятная структура меню</li>
+                    <li>Хлебные крошки</li>
+                    <li>Поиск по сайту</li>
+                    <li>Логичная группировка контента</li>
+                </ul>
+
+                <div class="tip">
+                    <strong>Совет:</strong> Проводите A/B тестирование и пользовательские тесты для улучшения юзабилити.
+                </div>
+            </div>
+
+            <!-- Адаптивность -->
+            <div class="card">
+                <h2>Адаптивный дизайн</h2>
+                
+                <div class="definition">
+                    <div class="term">Mobile First</div>
+                    <p>Подход к дизайну, при котором сначала проектируется мобильная версия, а затем адаптируется для больших экранов.</p>
+                </div>
+
+                <div class="definition">
+                    <div class="term">Breakpoints</div>
+                    <p>Точки перелома, в которых меняется макет сайта. Стандартные: 320px, 768px, 1024px, 1200px.</p>
+                </div>
+
+                <h3>Ключевые принципы</h3>
+                <ul>
+                    <li>Гибкие сетки</li>
+                    <li>Медиа-запросы</li>
+                    <li>Относительные единицы</li>
+                    <li>Оптимизация изображений</li>
+                </ul>
+
+                <div class="code">
+@media (max-width: 768px) {<br>
+&nbsp;&nbsp;.container {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns: 1fr;<br>
+&nbsp;&nbsp;}<br>
+}
+                </div>
+            </div>
+        </div>
+
+        <div class="theory-block">
+            <h2>Заключение</h2>
+            <p><strong>Веб-дизайн</strong> — это не только визуальная привлекательность, но и функциональность, доступность и пользовательский опыт. Успешный дизайн балансирует между эстетикой и практичностью, создавая интерфейсы, которые не только красивы, но и эффективно решают задачи пользователей.</p>
+            
+            <div class="tip">
+                <strong>Главное правило:</strong> Дизайн должен служить пользователю, а не наоборот. Каждый элемент должен иметь четкую цель и способствовать достижению целей пользователя.
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Владимир Косицын</p>
+        </div>
+    </div>
+</body>
+</html>
